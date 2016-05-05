@@ -1,0 +1,35 @@
+<div class="container" style="margin-top:20px;">
+    <h1><%= @one_post.date %>일 주점 목록</h1>
+    <div>
+        <h5><a href='/home/manage'>통합 관리 페이지로 돌아가기</a></h5>
+    </div>
+    <br>
+    <table class="table">
+        <tr>
+            <th>주점명</th>
+            <th>장소</th>
+            <th>메뉴1</th>
+            <th>가격1</th>
+            <th>메뉴2</th>
+            <th>가격2</th>
+            <th>메뉴3</th>
+            <th>가격3</th>
+            <th>소개</th>
+            
+        </tr>
+        <% @one_post.contents.each do |c| %>
+        <tr>
+            <td><%= c.name %></td>
+            <td><%= c.location %></td>
+            <td><%= c.menu1 %></td>
+            <td><%= c.price1 %></td>
+            <td><%= c.menu2 %></td>
+            <td><%= c.price2 %></td>
+            <td><%= c.menu3 %></td>
+            <td><%= c.price3 %></td>
+            <td><%= c.text %></td>
+            <td><a href="/update_view/<%= c.id %>">수정</a>       <a href="/destroy/<%= c.id %>">삭제</a></td>
+        </tr>
+        <% end %>
+    </table>
+</div>

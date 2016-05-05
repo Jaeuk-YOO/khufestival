@@ -1,0 +1,206 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home/main">KHU Festival Information</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <% @posts.each do |e| %>
+        <li><a href="/home/index/<%= e.id %>"><%= e.date %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h2>지도 배치 예정</h2>
+  <p class="head2">
+    <!-- <%= image_tag("map.jpg") %><br><br> -->
+    <span class="index-page"><a href="#tag1">공대</a></span>
+    <span class="index-page"><a href="#tag2">외대</a></span>
+    <span class="index-page"><a href="#tag3">체대</a></span>
+    <span class="index-page"><a href="#tag4">생대</a></span>
+    <span class="index-page"><a href="#tag5">학생회관</a></span>
+  </p>
+</div>
+
+
+<div class="container-fluid bg-3 text-center" id="tag1">
+   <h3>공과대학 주점 목록</h3>
+   <% @contents1.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
+<hr>
+
+<div class="container-fluid bg-3 text-center" id="tag2">
+   <h3>외국어대학 주점 목록</h3>
+   <% @contents2.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
+<hr>
+
+<div class="container-fluid bg-3 text-center" id="tag3">
+   <h3>체육대학 주점 목록</h3>
+   <% @contents3.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
+<hr>
+
+<div class="container-fluid bg-3 text-center" id="tag4">
+   <h3>생명과학대학 주점 목록</h3>
+   <% @contents4.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
+<hr>
+
+<div class="container-fluid bg-3 text-center" id="tag5">
+   <h3>학생회관 주점 목록</h3>
+   <% @contents5.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table table-condensed">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Copyright © LikeLion in KHU 2016<br>
+  자매품 : <a class="index-page" href="https://rt-bus.herokuapp.com/">외대버정</a><br>
+  <span id="edit"><a class="index-page" href="/home/enter">수정</a></span>
+  </p> 
+</footer>

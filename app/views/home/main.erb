@@ -1,0 +1,86 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home/main">KHU Festival Information</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <% @posts.each do |e| %>
+        <li><a href="/home/index/<%= e.id %>"><%= e.date %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <p class="margin head1">경희 주점<br>
+  <span class="head2">경희대학교 국제캠퍼스 축제 주점 정보</span></p><br>
+   <h3 class="margin">2016.05.23 - 2016.05.27</h3>
+</div>
+
+<!-- Second Container 
+<div class="container-fluid bg-2 text-center">
+ 
+</div>-->
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">LINEUP</h3><br>
+  <div class="row">
+    <div class="col-sm-2">
+      <h3>23일</h3>
+      <p>축제 D-DAY</p>
+    </div>
+     <div class="col-sm-2">
+      <h3>24일</h3>
+      <p>
+          축제 D+1<br><br>
+          카스콘서트
+      </p>
+    </div>
+     <div class="col-sm-2">
+      <h3>25일</h3>
+      <p>
+          축제 D+2<br><br>
+          마마무<br>
+          공대 : 에픽하이<br>
+      </p>
+    </div>
+    <div class="col-sm-2"> 
+      <h3>26일</h3>
+      <p>
+          축제 D+3<br><br>
+          에릭남<br>
+          DJ DOC<br>
+          여자친구<br>
+      </p>
+    </div>
+    <div class="col-sm-2"> 
+      <h3>27일</h3>
+      <p>
+          축제 D+4<br><br>
+      </p>
+    </div>
+     <div class="col-sm-2">
+      <h3>추가정보</h3>
+      <p>
+          
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Copyright © LikeLion in KHU 2016<br>
+  자매품 : <a href="https://rt-bus.herokuapp.com/">외대버정</a><br>
+  <span id="edit"><a class="index-page" href="/home/manage">수정</a></span>
+  </p> 
+</footer>

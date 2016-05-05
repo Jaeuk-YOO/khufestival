@@ -1,0 +1,58 @@
+<div class="container">
+  <div>
+    <h1>DB 수정</h1>
+    <form action="/real_update/<%= @one_content.id %>" method="POST">
+      
+       <label>날짜</label>
+        <label>위치</label>
+         <div class="radio">
+            <label>
+              <input type="radio" name="location" value="공대" checked>
+              공대
+            </label>
+            <label>
+              <input type="radio" name="location" value="외대">
+              외대
+            </label>
+            <label>
+              <input type="radio" name="location" value="체대">
+              체대
+            </label>
+            <label>
+              <input type="radio" name="location" value="생대">
+              생대
+            </label>
+            <label>
+              <input type="radio" name="location" value="학생회관">
+              학생회관
+            </label>
+          </div>
+        
+          <div class="form-group">
+            <label>동아리명</label>
+            <input type="text" class="form-control" name="name" value="<%= @one_content.name %>">
+            <label>간단한 주점 소개</label>
+            <input type="text" class="form-control" name="text" value="<%= @one_content.text %>">
+          </div>
+          
+          <div class="form-group">
+            <label>메뉴1</label>
+            <input type="text" class="form-control" name="menu1" value="<%= @one_content.menu1 %>">
+            <label>가격1</label>
+            <input type="text" class="form-control" name="price1" value="<%= @one_content.price1 %>">
+            <label>메뉴2</label>
+            <input type="text" class="form-control" name="menu2" value="<%= @one_content.menu2 %>">
+            <label>가격2</label>
+            <input type="text" class="form-control" name="price2" value="<%= @one_content.price2 %>">
+            <label>메뉴3</label>
+            <input type="text" class="form-control" name="menu3" value="<%= @one_content.menu3 %>">
+            <label>가격3</label>
+            <input type="text" class="form-control" name="price3" value="<%= @one_content.price3 %>">
+          </div>
+          
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div><a href='/home/manage'>통합 관리 페이지로 돌아가기</a></div>
+</div>
