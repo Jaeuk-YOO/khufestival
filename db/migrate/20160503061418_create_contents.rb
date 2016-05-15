@@ -20,6 +20,8 @@ class CreateContents < ActiveRecord::Migration
       
       #위치
       t.string :location
+      
+      t.string :pwd
 
       t.timestamps null: false
     end

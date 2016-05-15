@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160503061418) do
     t.integer  "price3"
     t.string   "text"
     t.string   "location"
+    t.string   "pwd"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -27,6 +27,7 @@ class HomeController < ApplicationController
   
   def main
     @posts = Post.all
+    @count = Content.count
   end
   
   def write
@@ -44,6 +45,7 @@ class HomeController < ApplicationController
     
     content.location = params[:location]
     content.text = params[:text]
+    content.pwd = params[:pwd]
     
     content.save
     
@@ -67,20 +69,40 @@ class HomeController < ApplicationController
   
   def real_update
     @one_content = Content.find(params[:id])
-    @one_content.name = params[:name]
-    
-    @one_content.menu1 = params[:menu1]
-    @one_content.price1 = params[:price1]
-    @one_content.menu2 = params[:menu2]
-    @one_content.price2 = params[:price2]
-    @one_content.menu3 = params[:menu3]
-    @one_content.price3 = params[:price3]
-    
-    @one_content.location = params[:location]
-    @one_content.text = params[:text]
-    
-    @one_content.save
-    
+    #비밀번호 확인 작업
+    pwd = params[:pwd]
+    if (pwd == @one_content.pwd)
+      @one_content.name = params[:name]
+      
+      @one_content.menu1 = params[:menu1]
+      @one_content.price1 = params[:price1]
+      @one_content.menu2 = params[:menu2]
+      @one_content.price2 = params[:price2]
+      @one_content.menu3 = params[:menu3]
+      @one_content.price3 = params[:price3]
+      
+      @one_content.location = params[:location]
+      @one_content.text = params[:text]
+      
+      @one_content.save
+      
+      elsif pwd == 'masterkhulion'
+      
+      @one_content.name = params[:name]
+      
+      @one_content.menu1 = params[:menu1]
+      @one_content.price1 = params[:price1]
+      @one_content.menu2 = params[:menu2]
+      @one_content.price2 = params[:price2]
+      @one_content.menu3 = params[:menu3]
+      @one_content.price3 = params[:price3]
+      
+      @one_content.location = params[:location]
+      @one_content.text = params[:text]
+      
+      @one_content.save
+        
+    end  
     redirect_to '/home/manage'
   end
   
@@ -88,6 +110,21 @@ class HomeController < ApplicationController
     @one_content = Content.find(params[:id])
     @one_content.destroy
     redirect_to :back
+  end
+  
+  def delete
+    @one_content = Content.find(params[:id])
+  end
+  
+  def real_delete
+    @one_content = Content.find(params[:id])
+    pwd = params[:pwd]
+    if (pwd == @one_content.pwd)
+      @one_content.destroy
+      elsif pwd == 'masterkhulion'
+      @one_content.destroy
+    end
+    redirect_to '/home/manage'
   end
   
 end

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'list/:id' => 'home#list'
   get 'update_view/:id' =>'home#update_view'
   post 'real_update/:id' => 'home#real_update'
+  get 'delete/:id' => 'home#delete'
+  post 'real_delete/:id' => 'home#real_delete'
   get 'destroy/:id' =>  'home#destroy'
   
   # The priority is based upon order of creation: first created -> highest priority.

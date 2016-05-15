@@ -68,7 +68,7 @@ body {
       color: #1abc9c !important;
   }
   #edit a{
-    color:#2f2f2f;
+    color:white;
   }
   
   .index-page a:link {
@@ -130,3 +130,51 @@ body {
   .table-title{
     font-weight:bold;
   }
+  .highlight{
+    color:#FF8000;
+  }
+  
+  .img_map{
+    max-width: 800px;
+    width: 80% ;
+    height: auto ;
+  }
+  
+  
+  
+/* 선열 수정 */
+  
+  .image-size img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
+    padding: 0px 2px 0px 2px;
+    border-radius: 10%
+    
+  }
+  .lineup_name-nest table{
+    border: 1px solid black;
+  }
+  .lineup_name{
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+  }
+  .image-size tr{
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .image-size{
+    margin: 10px 1% ;
+    
+  }
+  .lineup-date{
+    padding: 5px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+/***/
