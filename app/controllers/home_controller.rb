@@ -7,8 +7,9 @@ class HomeController < ApplicationController
     @contents2 = @one_post.contents.where(location:"외대")
     @contents3 = @one_post.contents.where(location:"체대")
     @contents4 = @one_post.contents.where(location:"생대")
-    @contents5 = @one_post.contents.where(location:"학생회관")
-    
+    @contents5 = @one_post.contents.where(location:"국제대")
+    @contents6 = @one_post.contents.where(location:"자대")
+    @contents7 = @one_post.contents.where(location:"학생회관")
     
   end
   

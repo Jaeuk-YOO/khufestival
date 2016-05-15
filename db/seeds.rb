@@ -32,6 +32,17 @@
     Content.create(post_id:1,location:"생대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
     Content.create(post_id:1,location:"생대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
     
+    
+    Content.create(post_id:1,location:"국제대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"국제대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"국제대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"국제대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"국제대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    
+    Content.create(post_id:1,location:"자대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"자대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    Content.create(post_id:1,location:"자대",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
+    
     Content.create(post_id:1,location:"학생회관",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
     Content.create(post_id:1,location:"학생회관",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
     Content.create(post_id:1,location:"학생회관",name:"멋쟁이사자처럼",menu1:"루비",price1:2000,menu2:"파이썬",price2:2000,menu3:"C#",price3:2000,text:"많이 오세요",pwd: 0000)
