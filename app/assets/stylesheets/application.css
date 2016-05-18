@@ -75,6 +75,15 @@ body {
   a.navbar-brand{
       font-size:25px !important;
   }
+  
+  @media only screen and (max-width: 400px) {
+    a.navbar-brand{
+        font-size:18px !important;
+        width:200px;
+        margin-left:5px;
+        margin-bottom:20px;
+    }
+  }
 
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
@@ -302,9 +311,17 @@ div.today_link{
 }
 
 .main-title{
-  font-size:40px;
+  font-size:37px;
 }
-
 .margin-small{
   margin-bottom: 30px;
+}
+
+footer{
+  position:fixed;
+  width:100%;
+  bottom:0%;
+  padding-top:15px !important;
+  padding-bottom:15px !important;
+  opacity:0.9;
 }
