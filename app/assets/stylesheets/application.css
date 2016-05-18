@@ -14,14 +14,13 @@
  *= require_self
  */
   @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-  
 @font-face{
   font-family: 'BMDH';
   src: url('/assets/BMDH.ttf') format("truetype");
 }
 @font-face{
   font-family: 'BMJUA';
-  src: url('https://khufestival.herokuapp.com/assets/BMJUA_ttf-9d33c1fcb5c9726f10c25ec503d94843208c5e553a0b276f7e71d3556519645d.ttf') format("truetype");
+  src: url('/assets/BMJUA_ttf.ttf') format("truetype");
 }
 
 body {
@@ -84,7 +83,6 @@ body {
         margin-bottom:20px;
     }
   }
-
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
@@ -313,6 +311,7 @@ div.today_link{
 .main-title{
   font-size:37px;
 }
+
 .margin-small{
   margin-bottom: 30px;
 }
