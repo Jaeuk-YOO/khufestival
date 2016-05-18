@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post 'home/enter_confirm'
   post 'home/write'
   post 'home/check'
+  get 'home/today'
+  get 'home/info'
   
   get 'list/:id' => 'home#list'
   get 'update_view/:id' =>'home#update_view'

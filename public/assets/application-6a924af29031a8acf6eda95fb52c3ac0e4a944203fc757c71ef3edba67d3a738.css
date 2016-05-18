@@ -1,0 +1,306 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+  @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  
+@font-face{
+  font-family: 'BMDH';
+  src: url('/assets/BMDH.ttf') format("truetype");
+}
+@font-face{
+  font-family: 'BMJUA';
+  src: url('/assets/BMJUA_ttf.ttf') format("truetype");
+}
+
+body {
+    font-family:'BMJUA', 'Nanum Gothic','Roboto', 'Helvetica', 'Arial', sans-serif !important;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .head1{
+    font-weight:bold;
+    font-size:33px;
+  }
+  .head2{
+    font-size:22px;
+    font-weight:normal;
+  }
+  .bg-1 { 
+     /* background-color: #2f2f2f;
+      color: #ffffff;
+      background : url("background-01e96e9daef838b6a229fe6d059db312bfaa2bd87440d1f982119d2a351d6b51.jpg");
+      background-size:cover;
+      background-position:center;*/
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 17px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  #edit a{
+    color:white;
+  }
+  
+  .index-box{
+    border-color:#2E2E2E;
+    border-style: solid;
+    border-radius: 5px;
+    width:30%;
+    margin:auto;
+    min-width:200px;
+  }
+  .index-page{
+    font-size:17px;
+    margin:4%;
+  }
+  .index-page a{
+    transition : color 0.6s;
+  }
+  .index-page a:link {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .index-page a:visited {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .index-page a:hover {
+      text-decoration: none;
+      color:#F781BE;
+  }
+  
+  .index-page a:active {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .manage{
+    text-align: center;
+    margin:10px 10px 10px 10px;
+    
+  }
+  
+  .enter{
+    margin: 30px 30px 30px 30px;
+    text-align: center
+  }
+  
+  .navbar-title{
+    font-size:25px;
+    color:#555555;
+  }
+  
+  .navbar-title a:link {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .navbar-title a:visited {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .navbar-title a:hover {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .navbar-title a:active {
+      text-decoration: none;
+      color:#2E2E2E;
+  }
+  
+  .table-title{
+    font-weight:bold;
+  }
+  .highlight{
+    color:#FF8000;
+  }
+  
+  .img_map{
+    max-width: 800px;
+    width: 80% ;
+    height: auto ;
+  }
+  
+  
+  
+/* 선열 수정 */
+  
+  .image-size img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
+    padding: 0px 2px 0px 2px;
+    border-radius: 10%
+    
+  }
+  .lineup_name-nest table{
+    border: 1px solid black;
+  }
+  .lineup_name{
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+  }
+  .image-size tr{
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .image-size{
+    margin: 10px 1% ;
+    
+  }
+  .lineup-date{
+    padding: 5px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+/***/
+@keyframes highlight{
+  0%{color:#2E2E2E;}
+  50%{color:#FF8000;font-size:28px;}
+  100%{color:#2E2E2E;font-size:25px;}
+}
+div.margin{
+  height:105px !important;
+}
+div.today_link{
+  height:30px !important;
+}
+.link-css{
+  font-size:25px;
+  animation-name : highlight;
+  animation-delay: 1s;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+
+}
+.link-css:link {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+/* visited link */
+.link-css:visited {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+/* mouse over link */
+.link-css:hover {
+    color: #FF8000 !important;
+    text-decoration: none !important;
+}
+
+/* selected link */
+.link-css:active {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+
+.scrollToTop{
+	width:100px; 
+	height:80px;
+	padding:10px; 
+	text-align:center; 
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:85%;
+	right:3%;
+	display:none;
+	/*background: url('arrow_up.png') no-repeat 0px 20px;*/
+	background-color: white;
+	z-index:9999;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+
+
+.nav_fest{
+  height:80px;
+  background-color: #2E2E2E;
+  color:white !important;
+  letter-spacing: 4px;
+  font-family:BMJUA;
+}
+.nav_fest_brand:hover{
+  text-decoration:none !important;
+  color:white !important;
+}
+.nav_fest_brand {
+  color:#D8D8D8;
+  float:left;
+  height:50px;
+  line-height: 20px;
+  padding: 15px 15px;
+  margin-top:15px;
+  font-size:18px !important;
+}
+.nav_date{
+  color:#D8D8D8;
+  float:left;
+  height:50px;
+  line-height: 20px;
+  padding: 15px 15px;
+  margin-top:15px;
+  font-size:18px !important;
+}
+
+.main-title{
+  font-size:40px;
+}
+
+.margin-small{
+  margin-bottom: 30px;
+}
