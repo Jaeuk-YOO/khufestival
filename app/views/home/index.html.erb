@@ -278,6 +278,40 @@
    <% end %>
 </div>
 
+<hr>
+
+<div class="container-fluid bg-3 text-center" id="tag8">
+   <h1>학생회관 주점 목록</h1>
+    <%= image_tag("hak.jpg", class: "img_map") %><br><br>
+   <% @contents7.each do |c| %>
+   <div class="col-sm-2">
+     <table class="table table-condensed">
+       <tr>
+         <td class="table-title danger" colspan="2"><%= c.name %></td>
+       </tr>
+       <tr>
+         <td class="table-title" colspan="2">메뉴</td>
+       </tr>
+       <tr>
+         <td><%= c.menu1 %></td>
+         <td><%= c.price1 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu2 %></td>
+         <td><%= c.price2 %>원</td>
+       </tr>
+       <tr>
+         <td><%= c.menu3 %></td>
+         <td><%= c.price3 %>원</td>
+       </tr>
+       <tr>
+         <td colspan="2"><%= c.text %></td>
+       </tr>
+     </table>
+   </div>
+   <% end %>
+</div>
+
 <p>
 <br><br><br><br>
 </p>
