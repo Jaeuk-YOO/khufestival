@@ -54,6 +54,9 @@ body {
       background-color: #ffffff; /* White */
       color: #555555;
   }
+  h3.bg-3{
+    font-size:40px;
+  }
   .bg-4 { 
       background-color: #2f2f2f; /* Black Gray */
       color: #fff;
