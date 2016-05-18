@@ -21,7 +21,7 @@
 }
 @font-face{
   font-family: 'BMJUA';
-  src: url('/assets/BMJUA_ttf-9d33c1fcb5c9726f10c25ec503d94843208c5e553a0b276f7e71d3556519645d.ttf') format("truetype");
+  src: url('/assets/BMJUA_ttf.ttf') format("truetype");
 }
 
 body {
