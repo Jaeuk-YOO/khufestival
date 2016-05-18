@@ -11,21 +11,26 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <% @posts.each do |e| %>
-        <li><a href="/home/index/<%= e.id %>"><%= e.date %></a></li>
+        <li><a href="/home/index/<%= e.id %>"><%= e.date %>일</a></li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav>
 
+
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <p class="margin head1">경희 주점<br>
-  <span class="head2">경희대학교 국제캠퍼스 축제 주점 정보</span></p><br>
-   <h3 class="margin">2016.05.23 - 2016.05.27</h3>
+  <p class="margin">
+    <span class="main-title">경희대학교 국제캠퍼스 축제 주점 정보</span><br>
+  </p>
+   <h3 class="#">2016.05.23 - 2016.05.27</h3><br><br><br>
    <!--DB 갯수 카운트 div-->
-   <div class="stat">
-    <h3 class="margin">지금까지 총 [ <span class="stat-count highlight"><%= @count %></span> ]개의 주점이 등록되었습니다</h3>
+   <div class="stat margin">
+     <h3 class="margin-small">지금까지 총 [ <span class="stat-count highlight"><%= @count %></span> ]개의 주점이 등록되었습니다</h3>
+     <div class="today_link">
+      <a href="/home/today" id="today_fest" class="link-css" value="<%= @today %>"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 오늘의 주점</a>
+     </div>
   </div>
 </div>
 
@@ -44,7 +49,7 @@
           <th class="lineup-date">23일</th>
         </tr>
         <tr class="row">
-          <td><%= image_tag("img/lineup/sonseung23.jpg") %></td>
+          <td><%= image_tag("img/lineup/sonseung23.jpeg") %></td>
         </tr>
         <tr class="row">
           <td class="lineup_name">손승연</td>
@@ -56,10 +61,10 @@
           <th colspan="4" class="lineup-date">24일</th>
         </tr>
         <tr class="row">
-          <td><%= image_tag("img/lineup/ailee24_1.jpg") %></td>
-          <td><%= image_tag("img/lineup/juncoco24.jpg") %></td>
-          <td><%= image_tag("img/lineup/maximite24.jpg") %></td>
-          <td><%= image_tag("img/lineup/sane24.jpg") %></td>
+          <td><%= image_tag("img/lineup/ailee24_1.jpeg") %></td>
+          <td><%= image_tag("img/lineup/juncoco24.jpeg") %></td>
+          <td><%= image_tag("img/lineup/maximite24.jpeg") %></td>
+          <td><%= image_tag("img/lineup/sane24.jpeg") %></td>
         </tr>
         <tr class="row">
           <td class="lineup_name">Ailee</td>
@@ -74,8 +79,8 @@
           <th colspan="2" class="lineup-date">25일</th>
         </tr>
         <tr class="row">
-          <td><%= image_tag("img/lineup/mamamoo25.jpg") %></td>
-          <td><%= image_tag("img/lineup/epikhigh25.jpg") %></td>
+          <td><%= image_tag("img/lineup/mamamoo25.jpeg") %></td>
+          <td><%= image_tag("img/lineup/epikhigh25.jpeg") %></td>
         </tr>
         <tr class="row">
           <td class="lineup_name">마마무</td>
@@ -88,9 +93,9 @@
           <th colspan="3" class="lineup-date">26일</th>
         </tr>
         <tr class="row">
-          <td><%= image_tag("img/lineup/girlfriend26.jpg") %></td>
-          <td><%= image_tag("img/lineup/ericnam26.jpg") %></td>
-          <td><%= image_tag("img/lineup/DJDOC26.jpg") %></td>
+          <td><%= image_tag("img/lineup/girlfriend26.jpeg") %></td>
+          <td><%= image_tag("img/lineup/ericnam26.jpeg") %></td>
+          <td><%= image_tag("img/lineup/DJDOC26.jpeg") %></td>
         </tr>
         <tr class="row">
           <td class="lineup_name">여자친구</td>
@@ -130,4 +135,18 @@
 	  count(jQuery(this));
 	});
 });
+
+$(document).ready(function(){
+    var date = $("#today_fest").val()
+    $("#today_fest").click(function(){
+        if (date == 23 | date == 24 | date == 25 | date == 26 | date == 27){
+          alert("Loading Successfully")
+        }
+        else{
+          alert("아직 축제가 시작하지 않았습니다")
+        }
+        
+    });
+});
+
 </script>

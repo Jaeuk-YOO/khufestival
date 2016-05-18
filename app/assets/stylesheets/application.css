@@ -13,18 +13,24 @@
  *= require_tree .
  *= require_self
  */
-
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face{
+  font-family: 'BMDH';
+  src: url('/assets/BMDH.ttf') format("truetype");
+}
+@font-face{
+  font-family: 'BMJUA';
+  src: url('/assets/BMJUA_ttf.ttf') format("truetype");
+}
 
 body {
-    font-family:'Nanum Gothic','Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family:'BMJUA', 'Nanum Gothic','Roboto', 'Helvetica', 'Arial', sans-serif !important;
     line-height: 1.8;
     color: #f5f6f7;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .head1{
-    font-family:'Nanum Gothic','Roboto', 'Helvetica', 'Arial', sans-serif;
     font-weight:bold;
     font-size:33px;
   }
@@ -33,11 +39,11 @@ body {
     font-weight:normal;
   }
   .bg-1 { 
-      background-color: #2f2f2f;
+     /* background-color: #2f2f2f;
       color: #ffffff;
       background : url("background-01e96e9daef838b6a229fe6d059db312bfaa2bd87440d1f982119d2a351d6b51.jpg");
       background-size:cover;
-      background-position:center;
+      background-position:center;*/
   }
   .bg-2 { 
       background-color: #474e5d; /* Dark Blue */
@@ -71,24 +77,39 @@ body {
     color:white;
   }
   
+  .index-box{
+    border-color:#2E2E2E;
+    border-style: solid;
+    border-radius: 5px;
+    width:30%;
+    margin:auto;
+    min-width:200px;
+  }
+  .index-page{
+    font-size:17px;
+    margin:4%;
+  }
+  .index-page a{
+    transition : color 0.6s;
+  }
   .index-page a:link {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .index-page a:visited {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .index-page a:hover {
       text-decoration: none;
-      color:white;
+      color:#F781BE;
   }
   
   .index-page a:active {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .manage{
@@ -109,22 +130,22 @@ body {
   
   .navbar-title a:link {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .navbar-title a:visited {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .navbar-title a:hover {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .navbar-title a:active {
       text-decoration: none;
-      color:white;
+      color:#2E2E2E;
   }
   
   .table-title{
@@ -178,3 +199,106 @@ body {
   }
 
 /***/
+@keyframes highlight{
+  0%{color:#2E2E2E;}
+  50%{color:#FF8000;font-size:28px;}
+  100%{color:#2E2E2E;font-size:25px;}
+}
+div.margin{
+  height:105px !important;
+}
+div.today_link{
+  height:30px !important;
+}
+.link-css{
+  font-size:25px;
+  animation-name : highlight;
+  animation-delay: 1s;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+
+}
+.link-css:link {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+/* visited link */
+.link-css:visited {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+/* mouse over link */
+.link-css:hover {
+    color: #FF8000 !important;
+    text-decoration: none !important;
+}
+
+/* selected link */
+.link-css:active {
+    color: #2E2E2E !important;
+    text-decoration: none !important;
+}
+
+
+.scrollToTop{
+	width:100px; 
+	height:80px;
+	padding:10px; 
+	text-align:center; 
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:85%;
+	right:3%;
+	display:none;
+	/*background: url('arrow_up.png') no-repeat 0px 20px;*/
+	background-color: white;
+	z-index:9999;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+
+
+.nav_fest{
+  height:80px;
+  background-color: #2E2E2E;
+  color:white !important;
+  letter-spacing: 4px;
+  font-family:BMJUA;
+}
+.nav_fest_brand:hover{
+  text-decoration:none !important;
+  color:white !important;
+}
+.nav_fest_brand {
+  color:#D8D8D8;
+  float:left;
+  height:50px;
+  line-height: 20px;
+  padding: 15px 15px;
+  margin-top:15px;
+  font-size:18px !important;
+}
+.nav_date{
+  color:#D8D8D8;
+  float:left;
+  height:50px;
+  line-height: 20px;
+  padding: 15px 15px;
+  margin-top:15px;
+  font-size:18px !important;
+}
+
+.main-title{
+  font-size:40px;
+}
+
+.margin-small{
+  margin-bottom: 30px;
+}

@@ -11,6 +11,8 @@ class HomeController < ApplicationController
     @contents6 = @one_post.contents.where(location:"자대")
     @contents7 = @one_post.contents.where(location:"학생회관")
     
+    
+    
   end
   
   def enter
@@ -29,6 +31,30 @@ class HomeController < ApplicationController
   def main
     @posts = Post.all
     @count = Content.count
+    
+    Time.zone = 'Seoul'
+    @today = Time.zone.now.mday
+  end
+  
+  def today
+    
+    Time.zone = 'Seoul'
+    today = Time.zone.now.mday
+    
+    if (today == 23)
+      redirect_to '/home/index/1'
+    elsif today == 24
+      redirect_to '/home/index/2'
+    elsif today == 25
+      redirect_to '/home/index/3'
+    elsif today == 26
+      redirect_to '/home/index/4'
+    elsif today == 27
+      redirect_to '/home/index/5'
+    else
+      redirect_to '/home/main'
+    end
+
   end
   
   def write
@@ -128,4 +154,7 @@ class HomeController < ApplicationController
     redirect_to '/home/manage'
   end
   
+  def info
+     @posts = Post.all
+  end
 end

@@ -11,26 +11,34 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <% @posts.each do |e| %>
-        <li><a href="/home/index/<%= e.id %>"><%= e.date %></a></li>
+        <li><a href="/home/index/<%= e.id %>"><%= e.date %>일</a></li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- Top 버튼 -->
+<a href="#" class="scrollToTop">Scroll To Top</a>
+
+
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h2>지도 배치 예정</h2>
   <p class="head2">
-    <%= image_tag("map.png", class: "img_map") %><br><br>
-    <span class="index-page"><a href="#tag1">공대</a></span>
-    <span class="index-page"><a href="#tag2">외대</a></span>
-    <span class="index-page"><a href="#tag3">체대</a></span>
-    <span class="index-page"><a href="#tag4">생대</a></span>
-    <span class="index-page"><a href="#tag5">국제대</a></span>
-    <span class="index-page"><a href="#tag6">자대</a></span>
-    <span class="index-page"><a href="#tag7">학생회관</a></span>
+    <%= image_tag("map.png", class: "img_map") %>
   </p>
+    <div class="head2">
+        <div class="index-box">
+            <span class="index-page"><a href="#tag1">공대</a></span>
+            <span class="index-page"><a href="#tag2">외대</a></span>
+            <span class="index-page"><a href="#tag3">체대</a></span>
+            <span class="index-page"><a href="#tag4">생대</a></span>
+            <br>
+            <span class="index-page"><a href="#tag5">국제대</a></span>
+            <span class="index-page"><a href="#tag6">자대</a></span>
+            <span class="index-page"><a href="#tag7">학생회관</a></span>
+        </div>
+    </div>
 </div>
 
 
@@ -277,3 +285,26 @@
   <span id="edit"><a class="index-page" href="/home/enter">수정</a></span>
   </p> 
 </footer>
+
+
+<!-- TOP 버튼 -->
+<script>
+    $(document).ready(function(){
+	
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+});
+</script>
